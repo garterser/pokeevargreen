@@ -82,3 +82,9 @@ MtMoon_B2F_Text_ObtainedHelixFossil::
 MtMoon_B2F_Text_ObtainedDomeFossil::
     .string "Obtained the DOME FOSSIL!$"
 
+MtMoon_B2F_Text_Pickpocket::
+    .string "You pickpocketed the\n"
+    .string "other fossil off of\p"
+    .string "MIGUEL.$"
+	
+	

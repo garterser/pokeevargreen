@@ -143,7 +143,7 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_HOENN(JIGGLYPUFF),
     SPECIES_TO_HOENN(WIGGLYTUFF),
     SPECIES_TO_HOENN(ZUBAT),
-    SPECIES_TO_HOENN(GOLBAT),
+    SPECIES_TO_HOENN(GOLBAT), 
     SPECIES_TO_HOENN(ODDISH),
     SPECIES_TO_HOENN(GLOOM),
     SPECIES_TO_HOENN(VILEPLUME),
@@ -1359,13 +1359,13 @@ static const struct SpindaSpot sSpindaSpotGraphics[] =
 
 static const s8 sNatureStatTable[NUM_NATURES][NUM_NATURE_STATS] =
 {                      // Attack  Defense  Speed  Sp.Atk  Sp.Def
-    [NATURE_HARDY]   = {    0,      0,      0,      0,      0   },
+    [NATURE_HARDY]   = {   +1,     +1,      0,     -1,     -1   },
     [NATURE_LONELY]  = {   +1,     -1,      0,      0,      0   },
     [NATURE_BRAVE]   = {   +1,      0,     -1,      0,      0   },
     [NATURE_ADAMANT] = {   +1,      0,      0,     -1,      0   },
     [NATURE_NAUGHTY] = {   +1,      0,      0,      0,     -1   },
     [NATURE_BOLD]    = {   -1,     +1,      0,      0,      0   },
-    [NATURE_DOCILE]  = {    0,      0,      0,      0,      0   },
+    [NATURE_DOCILE]  = {   -1,     +1,      0,     -1,     +1   },
     [NATURE_RELAXED] = {    0,     +1,     -1,      0,      0   },
     [NATURE_IMPISH]  = {    0,     +1,      0,     -1,      0   },
     [NATURE_LAX]     = {    0,     +1,      0,      0,     -1   },
@@ -1377,13 +1377,13 @@ static const s8 sNatureStatTable[NUM_NATURES][NUM_NATURE_STATS] =
     [NATURE_MODEST]  = {   -1,      0,      0,     +1,      0   },
     [NATURE_MILD]    = {    0,     -1,      0,     +1,      0   },
     [NATURE_QUIET]   = {    0,      0,     -1,     +1,      0   },
-    [NATURE_BASHFUL] = {    0,      0,      0,      0,      0   },
+    [NATURE_BASHFUL] = {   +1,     -1,      0,     +1,     -1   },
     [NATURE_RASH]    = {    0,      0,      0,     +1,     -1   },
     [NATURE_CALM]    = {   -1,      0,      0,      0,     +1   },
     [NATURE_GENTLE]  = {    0,     -1,      0,      0,     +1   },
     [NATURE_SASSY]   = {    0,      0,     -1,      0,     +1   },
     [NATURE_CAREFUL] = {    0,      0,      0,     -1,     +1   },
-    [NATURE_QUIRKY]  = {    0,      0,      0,      0,      0   },
+    [NATURE_QUIRKY]  = {   -1,     -1,      0,     +1,     +1   },
 };
 
 #include "data/pokemon/tmhm_learnsets.h"
@@ -2471,7 +2471,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         spAttack *= 2;
     if (defenderHoldEffect == HOLD_EFFECT_DEEP_SEA_SCALE && defender->species == SPECIES_CLAMPERL)
         spDefense *= 2;
-    if (attackerHoldEffect == HOLD_EFFECT_LIGHT_BALL && attacker->species == SPECIES_PIKACHU)
+    if (attackerHoldEffect == HOLD_EFFECT_LIGHT_BALL && (attacker->species == SPECIES_PIKACHU || attacker->species == SPECIES_RAICHU || attacker->species == SPECIES_PICHU))
         spAttack *= 2;
     if (defenderHoldEffect == HOLD_EFFECT_METAL_POWDER && defender->species == SPECIES_DITTO)
         defense *= 2;
@@ -2479,6 +2479,12 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         attack *= 2;
     if (defender->ability == ABILITY_THICK_FAT && (type == TYPE_FIRE || type == TYPE_ICE))
         spAttack /= 2;
+	if (defender->ability == ABILITY_LIGHTNING_ROD && (type == TYPE_ELECTRIC))
+        spAttack /= 4;
+	if (defender->ability == ABILITY_RAIN_DISH && (type == TYPE_WATER))
+        spAttack /= 4;
+	if (defender->ability == ABILITY_SHELL_ARMOR)
+        attack = (75 * attack) / 100;
     if (attacker->ability == ABILITY_HUSTLE)
         attack = (150 * attack) / 100;
     if (attacker->ability == ABILITY_PLUS && ABILITY_ON_FIELD2(ABILITY_MINUS))
@@ -2501,6 +2507,12 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         gBattleMovePower = (150 * gBattleMovePower) / 100;
     if (type == TYPE_BUG && attacker->ability == ABILITY_SWARM && attacker->hp <= (attacker->maxHP / 3))
         gBattleMovePower = (150 * gBattleMovePower) / 100;
+	if (type == TYPE_NORMAL && attacker->ability == ABILITY_RUN_AWAY)
+        gBattleMovePower = (3 * gBattleMovePower) / 2;
+	if (type == TYPE_ELECTRIC && attacker->ability == ABILITY_PLUS)
+        gBattleMovePower = (3 * gBattleMovePower) / 2;
+	if (type == TYPE_STEEL && attacker->ability == ABILITY_MINUS)
+        gBattleMovePower = (3 * gBattleMovePower) / 2;
 
     // Self-destruct / Explosion cut defense in half
     if (gBattleMoves[gCurrentMove].effect == EFFECT_EXPLOSION)
@@ -5055,7 +5067,7 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
             switch (gEvolutionTable[species][i].method)
             {
             case EVO_FRIENDSHIP:
-                if (friendship >= 220)
+                if (friendship >= 201)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
             // FR/LG removed the time of day evolutions due to having no RTC.

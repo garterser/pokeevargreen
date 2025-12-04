@@ -11,9 +11,9 @@ PalletTown_Text_OakGrassUnsafeNeedMon::
     .string "Here, come with me!$"
 
 PalletTown_Text_RaisingMonsToo::
-    .string "I'm raising POKéMON, too.\p"
-    .string "When they get strong, they can\n"
-    .string "protect me.$"
+    .string "i got a squirtle in this cage here\p"
+    .string "...I'm just kidding, but can\n"
+    .string "you imagine?$"
 
 PalletTown_Text_CanStoreItemsAndMonsInPC::
     .string "Technology is incredible!\p"

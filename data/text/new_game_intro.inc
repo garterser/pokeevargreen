@@ -198,18 +198,18 @@ gOakSpeech_Text_ThisWorld::
     .string "This world…$"
 
 gOakSpeech_Text_IsInhabitedFarAndWide::
-    .string "…is inhabited far and wide by\n"
-    .string "creatures called POKéMON.\p$"
+    .string "…doesn't always make much sense.\n"
+    .string "It's getting weirder by the day!\p$"
 
 gOakSpeech_Text_IStudyPokemon::
-    .string "For some people, POKéMON are pets.\n"
-    .string "Others use them for battling.\p"
-    .string "As for myself…\p"
-    .string "I study POKéMON as a profession.\p$"
+    .string "POKéMON from other regions have\n"
+    .string "popped up at random! There's even\p"
+    .string "talk of people keeping rare pokemon\p"
+    .string "caged and then unleashing them.\p$"
 
 gOakSpeech_Text_TellMeALittleAboutYourself::
-    .string "But first, tell me a little about\n"
-    .string "yourself.\p$"
+    .string "First, I need to know who I'm dealing\n"
+    .string "with.\p$"
 
 gOakSpeech_Text_YourNameWhatIsIt::
     .string "Let's begin with your name.\n"
@@ -239,5 +239,5 @@ gOakSpeech_Text_LetsGo::
     .string "{PLAYER}!\p"
     .string "Your very own POKéMON legend is\n"
     .string "about to unfold!\p"
-    .string "A world of dreams and adventures\n"
-    .string "with POKéMON awaits! Let's go!$"
+    .string "Watch out for cage people and\n"
+    .string "travel far! Let's go!$"

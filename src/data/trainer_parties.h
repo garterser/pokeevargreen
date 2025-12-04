@@ -5616,6 +5616,45 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderBrock[] = {
     },
 };
 
+static const struct TrainerMonNoItemCustomMoves sParty_LeaderBrockPostgame[] = {
+    {
+        .iv = 0,
+        .lvl = 74,
+        .species = SPECIES_GOLEM,
+        .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_BRICK_BREAK, MOVE_BODY_SLAM},
+    },
+    {
+        .iv = 0,
+        .lvl = 74,
+        .species = SPECIES_DUGTRIO,
+        .moves = {MOVE_EARTHQUAKE, MOVE_SLASH, MOVE_PROTECT, MOVE_BEAT_UP},
+    },
+    {
+        .iv = 0,
+        .lvl = 74,
+        .species = SPECIES_AERODACTYL,
+        .moves = {MOVE_CURSE, MOVE_STEEL_WING, MOVE_ANCIENT_POWER, MOVE_EARTHQUAKE},
+    },
+    {
+        .iv = 0,
+        .lvl = 75,
+        .species = SPECIES_AGGRON,
+        .moves = {MOVE_EARTHQUAKE, MOVE_BRICK_BREAK, MOVE_ENDEAVOR, MOVE_ROCK_SLIDE},
+    },
+    {
+        .iv = 0,
+        .lvl = 75,
+        .species = SPECIES_REGIROCK,
+        .moves = {MOVE_ANCIENT_POWER, MOVE_BRICK_BREAK, MOVE_HYPER_BEAM, MOVE_SUPERPOWER},
+    },
+    {
+        .iv = 0,
+        .lvl = 76,
+        .species = SPECIES_STEELIX,
+        .moves = {MOVE_BODY_SLAM, MOVE_IRON_TAIL, MOVE_EARTHQUAKE, MOVE_BLOCK},
+    },
+};
+
 static const struct TrainerMonNoItemCustomMoves sParty_LeaderMisty[] = {
     {
         .iv = 0,
@@ -5915,7 +5954,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_RivalPokemonTowerBulbasa
     {
         .iv = 100,
         .lvl = 23,
-        .species = SPECIES_GYARADOS,
+        .species = SPECIES_STARYU,
     },
     {
         .iv = 100,
@@ -5948,7 +5987,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_RivalPokemonTowerCharman
     {
         .iv = 100,
         .lvl = 22,
-        .species = SPECIES_GYARADOS,
+        .species = SPECIES_STARYU,
     },
     {
         .iv = 100,
@@ -5999,7 +6038,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_RivalSilphBulbasaur[] = 
     {
         .iv = 100,
         .lvl = 38,
-        .species = SPECIES_GYARADOS,
+        .species = SPECIES_STARYU,
     },
     {
         .iv = 100,
@@ -6032,7 +6071,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_RivalSilphCharmander[] =
     {
         .iv = 100,
         .lvl = 35,
-        .species = SPECIES_GYARADOS,
+        .species = SPECIES_STARYU,
     },
     {
         .iv = 100,
@@ -6101,8 +6140,8 @@ static const struct TrainerMonNoItemCustomMoves sParty_RivalRoute22LateBulbasaur
     {
         .iv = 150,
         .lvl = 45,
-        .species = SPECIES_GYARADOS,
-        .moves = {MOVE_HYDRO_PUMP, MOVE_TWISTER, MOVE_LEER, MOVE_RAIN_DANCE},
+        .species = SPECIES_STARYU,
+        .moves = {MOVE_HYDRO_PUMP, MOVE_SWIFT, MOVE_RECOVER, MOVE_RAIN_DANCE},
     },
     {
         .iv = 150,
@@ -6146,8 +6185,8 @@ static const struct TrainerMonNoItemCustomMoves sParty_RivalRoute22LateCharmande
     {
         .iv = 150,
         .lvl = 45,
-        .species = SPECIES_GYARADOS,
-        .moves = {MOVE_HYDRO_PUMP, MOVE_TWISTER, MOVE_LEER, MOVE_RAIN_DANCE},
+        .species = SPECIES_STARYU,
+        .moves = {MOVE_HYDRO_PUMP, MOVE_SWIFT, MOVE_RECOVER, MOVE_RAIN_DANCE},
     },
     {
         .iv = 150,
@@ -6233,9 +6272,9 @@ static const struct TrainerMonItemCustomMoves sParty_ChampionFirstBulbasaur[] = 
     {
         .iv = 255,
         .lvl = 59,
-        .species = SPECIES_GYARADOS,
+        .species = SPECIES_STARMIE,
         .heldItem = ITEM_NONE,
-        .moves = {MOVE_HYDRO_PUMP, MOVE_DRAGON_RAGE, MOVE_BITE, MOVE_THRASH},
+        .moves = {MOVE_HYDRO_PUMP, MOVE_RECOVER, MOVE_SWIFT, MOVE_LIGHT_SCREEN},
     },
     {
         .iv = 255,
@@ -6285,9 +6324,9 @@ static const struct TrainerMonItemCustomMoves sParty_ChampionFirstCharmander[] =
     {
         .iv = 255,
         .lvl = 61,
-        .species = SPECIES_GYARADOS,
+        .species = SPECIES_STARMIE,
         .heldItem = ITEM_NONE,
-        .moves = {MOVE_HYDRO_PUMP, MOVE_DRAGON_RAGE, MOVE_BITE, MOVE_THRASH},
+        .moves = {MOVE_HYDRO_PUMP, MOVE_RECOVER, MOVE_SWIFT, MOVE_LIGHT_SCREEN},
     },
     {
         .iv = 255,
@@ -10783,9 +10822,9 @@ static const struct TrainerMonItemCustomMoves sParty_ChampionRematchBulbasaur[] 
     {
         .iv = 255,
         .lvl = 73,
-        .species = SPECIES_GYARADOS,
+        .species = SPECIES_STARMIE,
         .heldItem = ITEM_NONE,
-        .moves = {MOVE_HYDRO_PUMP, MOVE_DRAGON_DANCE, MOVE_EARTHQUAKE, MOVE_HYPER_BEAM},
+        .moves = {MOVE_HYDRO_PUMP, MOVE_RECOVER, MOVE_THUNDERBOLT, MOVE_BLIZZARD},
     },
     {
         .iv = 255,
@@ -10835,9 +10874,9 @@ static const struct TrainerMonItemCustomMoves sParty_ChampionRematchCharmander[]
     {
         .iv = 255,
         .lvl = 73,
-        .species = SPECIES_GYARADOS,
+        .species = SPECIES_STARMIE,
         .heldItem = ITEM_NONE,
-        .moves = {MOVE_HYDRO_PUMP, MOVE_DRAGON_DANCE, MOVE_EARTHQUAKE, MOVE_HYPER_BEAM},
+        .moves = {MOVE_HYDRO_PUMP, MOVE_RECOVER, MOVE_THUNDERBOLT, MOVE_BLIZZARD},
     },
     {
         .iv = 255,

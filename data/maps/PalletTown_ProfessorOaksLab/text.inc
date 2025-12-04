@@ -101,22 +101,22 @@ PalletTown_ProfessorOaksLab_Text_OakHeyDontGoAwayYet::
     .string "Don't go away yet!$"
 
 PalletTown_ProfessorOaksLab_Text_OakChoosingCharmander::
-    .string "Ah! CHARMANDER is your choice.\n"
+    .string "Ah! GROWLITHE is your choice.\n"
     .string "You should raise it patiently.\p"
     .string "So, {PLAYER}, you're claiming the\n"
-    .string "FIRE POKéMON CHARMANDER?$"
+    .string "PUPPY POKéMON GROWLITHE?$"
 
 PalletTown_ProfessorOaksLab_Text_OakChoosingSquirtle::
-    .string "Hm! SQUIRTLE is your choice.\n"
+    .string "Hm! STARYU is your choice.\n"
     .string "It's one worth raising.\p"
     .string "So, {PLAYER}, you've decided on the\n"
-    .string "WATER POKéMON SQUIRTLE?$"
+    .string "STARSHAPED POKéMON STARYU?$"
 
 PalletTown_ProfessorOaksLab_Text_OakChoosingBulbasaur::
-    .string "I see! BULBASAUR is your choice.\n"
+    .string "I see! EXEGGCUTE is your choice.\n"
     .string "It's very easy to raise.\p"
     .string "So, {PLAYER}, you want to go with\n"
-    .string "the GRASS POKéMON BULBASAUR?$"
+    .string "the EGG POKéMON EXEGGCUTE?$"
 
 PalletTown_ProfessorOaksLab_Text_OakThisMonIsEnergetic::
     .string "This POKéMON is really quite\n"
@@ -354,4 +354,28 @@ PalletTown_ProfessorOaksLab_Text_RivalIllCompleteThePokedex::
     .string "I think I'll try looking around\n"
     .string "ONE ISLAND first…\p"
     .string "Anyways, I'm outta here!$"
+	
+PalletTown_ProfessorOaksLab_Text_OakChoosingTyrogue::
+    .string "That wasted POKéBALL on the floor?\n"
+    .string "It's TYROGUE, Finnicky to raise.\p"
+    .string "So, {PLAYER}, you want to go with\n"
+    .string "the SCUFFLE POKéMON TYROGUE?$"
+	
+PalletTown_ProfessorOaksLab_Text_OakChoosingPorygon::
+    .string "That POKéBALL under the desk?\n"
+    .string "It's PORYGON, Strange to raise.\p"
+    .string "So, {PLAYER}, you want to go with\n"
+    .string "the VIRTUAL POKéMON PORYGON?$"
+	
+PalletTown_ProfessorOaksLab_Text_OakChoosingGrimer::
+    .string "That POKéBALL behind the chamber?\n"
+    .string "It's GRIMER, Tricky to raise.\p"
+    .string "So, {PLAYER}, you want to go with\n"
+    .string "the SLUDGE POKéMON GRIMER?$"
+	
+PalletTown_ProfessorOaksLab_Text_OakChoosingSmeargle::
+    .string "That POKéBALL near the books?\n"
+    .string "It's SMEARGLE, Hard to raise.\p"
+    .string "So, {PLAYER}, you want to go with\n"
+    .string "the PAINTER POKéMON SMEARGLE?$"
 

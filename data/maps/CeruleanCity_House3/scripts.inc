@@ -2,7 +2,10 @@ CeruleanCity_House3_MapScripts::
 	.byte 0
 
 CeruleanCity_House3_EventScript_OldWoman::
-	msgbox CeruleanCity_House3_Text_PleaseTradeWithMyHusband, MSGBOX_NPC
+	message CeruleanCity_House3_Text_PleaseTradeWithMyHusband
+	waitmessage
+	setwildbattle SPECIES_SQUIRTLE, 5
+	special StartLegendaryBattle
 	end
 
 CeruleanCity_House3_EventScript_Dontae::

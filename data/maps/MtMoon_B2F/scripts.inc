@@ -69,6 +69,8 @@ MtMoon_B2F_EventScript_DomeFossil::
 	waitmessage
 	waitfanfare
 	removeobject LOCALID_HELIX_FOSSIL
+	giveitem_msg MtMoon_B2F_Text_Pickpocket, ITEM_HELIX_FOSSIL, 1, MUS_OBTAIN_KEY_ITEM
+	closemessage
 	setflag FLAG_GOT_DOME_FOSSIL
 	setflag FLAG_GOT_FOSSIL_FROM_MT_MOON
 	release
@@ -100,6 +102,8 @@ MtMoon_B2F_EventScript_HelixFossil::
 	waitmessage
 	waitfanfare
 	removeobject LOCALID_DOME_FOSSIL
+	giveitem_msg MtMoon_B2F_Text_Pickpocket, ITEM_DOME_FOSSIL, 1, MUS_OBTAIN_KEY_ITEM
+	closemessage
 	setflag FLAG_GOT_HELIX_FOSSIL
 	setflag FLAG_GOT_FOSSIL_FROM_MT_MOON
 	release
