@@ -79,8 +79,7 @@ VermilionCity_PokemonFanClub_Text_MakeRoomForThis::
     .string "Make room for this!$"
 
 VermilionCity_PokemonFanClub_Text_ChairmanVeryVocalAboutPokemon::
-    .string "Our CHAIRMAN is very vocal about\n"
-    .string "POKéMON.$"
+    .string "got a totodile in this cage here$"
 
 VermilionCity_PokemonFanClub_Text_ListenPolitelyToOtherTrainers::
     .string "Let's all listen politely to other\n"

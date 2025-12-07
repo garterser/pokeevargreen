@@ -26,13 +26,13 @@ CeladonCity_DepartmentStore_5F_EventScript_ClerkXItems::
 
 	.align 2
 CeladonCity_DepartmentStore_5F_XItems::
-	.2byte ITEM_X_ATTACK
-	.2byte ITEM_X_DEFEND
-	.2byte ITEM_X_SPEED
-	.2byte ITEM_X_SPECIAL
-	.2byte ITEM_X_ACCURACY
-	.2byte ITEM_GUARD_SPEC
-	.2byte ITEM_DIRE_HIT
+	.2byte ITEM_MACHO_BRACE
+	.2byte ITEM_CHOICE_BAND
+	.2byte ITEM_SHELL_BELL
+	.2byte ITEM_LEFTOVERS
+	.2byte ITEM_KINGS_ROCK
+	.2byte ITEM_BRIGHT_POWDER
+	.2byte ITEM_LUCKY_EGG
 	.2byte ITEM_NONE
 	release
 	end

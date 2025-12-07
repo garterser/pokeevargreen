@@ -31,5 +31,10 @@ CeruleanCity_PokemonCenter_1F_EventScript_Youngster::
 	end
 
 CeruleanCity_PokemonCenter_1F_EventScript_Lass::
-	msgbox CeruleanCity_PokemonCenter_1F_Text_TryTradingUpstairs, MSGBOX_NPC
+	faceplayer
+	message CeruleanCity_BikeShop_Text_BikesCoolButExpensive
+	waitmessage
+	setwildbattle SPECIES_BULBASAUR, 5
+	special StartLegendaryBattle
 	end
+	

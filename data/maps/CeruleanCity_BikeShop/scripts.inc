@@ -54,11 +54,11 @@ CeruleanCity_BikeShop_EventScript_Woman::
 	end
 
 CeruleanCity_BikeShop_EventScript_Youngster::
-	lock
 	faceplayer
-	goto_if_set FLAG_GOT_BICYCLE, CeruleanCity_BikeShop_EventScript_YoungsterHaveBike
-	msgbox CeruleanCity_BikeShop_Text_BikesCoolButExpensive
-	release
+	message CeruleanCity_BikeShop_Text_BikesCoolButExpensive
+	waitmessage
+	setwildbattle SPECIES_CHARMANDER, 5
+	special StartLegendaryBattle
 	end
 
 CeruleanCity_BikeShop_EventScript_YoungsterHaveBike::

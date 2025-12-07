@@ -2,7 +2,11 @@ VermilionCity_House3_MapScripts::
 	.byte 0
 
 VermilionCity_House3_EventScript_Boy::
-	msgbox VermilionCity_House3_Text_PidgeyFlyLetterToSaffron, MSGBOX_NPC
+	faceplayer
+	message VermilionCity_House3_Text_PidgeyFlyLetterToSaffron
+	waitmessage
+	setwildbattle SPECIES_CHIKORITA, 5
+	special StartLegendaryBattle
 	end
 
 VermilionCity_House3_EventScript_Lass::

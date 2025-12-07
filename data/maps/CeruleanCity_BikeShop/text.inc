@@ -39,8 +39,7 @@ CeruleanCity_BikeShop_Text_CityBikeGoodEnoughForMe::
     .string "basket on a mountain bike.$"
 
 CeruleanCity_BikeShop_Text_BikesCoolButExpensive::
-    .string "These bikes are cool, but they're\n"
-    .string "way expensive!$"
+    .string "got a charmander in this cage here$"
 
 CeruleanCity_BikeShop_Text_WowYourBikeIsCool::
     .string "Wow.\n"

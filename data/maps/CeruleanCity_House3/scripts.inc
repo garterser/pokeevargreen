@@ -2,6 +2,7 @@ CeruleanCity_House3_MapScripts::
 	.byte 0
 
 CeruleanCity_House3_EventScript_OldWoman::
+	faceplayer
 	message CeruleanCity_House3_Text_PleaseTradeWithMyHusband
 	waitmessage
 	setwildbattle SPECIES_SQUIRTLE, 5

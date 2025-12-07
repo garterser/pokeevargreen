@@ -3423,6 +3423,11 @@ static const u16 sSmeargleLevelUpLearnset[] = {
 
 static const u16 sTyrogueLevelUpLearnset[] = {
     LEVEL_UP_MOVE(1, MOVE_TACKLE),
+    LEVEL_UP_MOVE(7, MOVE_KARATE_CHOP),
+    LEVEL_UP_MOVE(7, MOVE_LOW_KICK),
+    LEVEL_UP_MOVE(10, MOVE_BULK_UP),
+    LEVEL_UP_MOVE(13, MOVE_FAKE_OUT),
+    LEVEL_UP_MOVE(16, MOVE_COUNTER),
     LEVEL_UP_END
 };
 

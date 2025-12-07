@@ -2479,6 +2479,8 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         attack *= 2;
     if (defender->ability == ABILITY_THICK_FAT && (type == TYPE_FIRE || type == TYPE_ICE))
         spAttack /= 2;
+	if (defender->ability == ABILITY_FORECAST && (type == TYPE_FIRE || type == TYPE_ICE || type == TYPE_WATER))
+        spAttack /= 2;
 	if (defender->ability == ABILITY_LIGHTNING_ROD && (type == TYPE_ELECTRIC))
         spAttack /= 4;
 	if (defender->ability == ABILITY_RAIN_DISH && (type == TYPE_WATER))
@@ -2512,6 +2514,8 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
 	if (type == TYPE_ELECTRIC && attacker->ability == ABILITY_PLUS)
         gBattleMovePower = (3 * gBattleMovePower) / 2;
 	if (type == TYPE_STEEL && attacker->ability == ABILITY_MINUS)
+        gBattleMovePower = (3 * gBattleMovePower) / 2;
+	if (attacker->ability == ABILITY_FORECAST && (type == TYPE_FIRE || type == TYPE_ICE || type == TYPE_WATER))
         gBattleMovePower = (3 * gBattleMovePower) / 2;
 
     // Self-destruct / Explosion cut defense in half

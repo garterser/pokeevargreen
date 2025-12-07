@@ -35,11 +35,11 @@ VermilionCity_PokemonFanClub_EventScript_NoRoomForBikeVoucher::
 	end
 
 VermilionCity_PokemonFanClub_EventScript_WorkerF::
-	lock
 	faceplayer
-	goto_if_set FLAG_SYS_GAME_CLEAR, VermilionCity_PokemonFanClub_EventScript_WorkerFGameClear
-	msgbox VermilionCity_PokemonFanClub_Text_ChairmanVeryVocalAboutPokemon
-	release
+	message VermilionCity_PokemonFanClub_Text_ChairmanVeryVocalAboutPokemon
+	waitmessage
+	setwildbattle SPECIES_TOTODILE, 5
+	special StartLegendaryBattle
 	end
 
 VermilionCity_PokemonFanClub_EventScript_WorkerFGameClear::

@@ -1,6 +1,5 @@
-VermilionCity_House3_Text_PidgeyFlyLetterToSaffron::
-    .string "I'm getting my PIDGEY to fly a\n"
-    .string "letter to SAFFRON in the north.$"
+VermilionCity_House3_Text_PidgeyFlyLetterToSaffron:: 
+    .string "got a chikorita in this cage here$"
 
 VermilionCity_House3_Text_Pidgey::
     .string "PIDGEY: Kurukkoo!$"
